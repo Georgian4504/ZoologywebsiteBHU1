@@ -1,0 +1,6 @@
+{
+  "name": "Department of Zoology - BHU",
+  "description": "Student resource hub and academic portal for MSc Zoology at Banaras Hindu University, featuring syllabus, study materials, and research archives.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

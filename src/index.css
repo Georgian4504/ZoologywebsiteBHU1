@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sage: #DCE5D3;
+  --color-sage-light: #EBF1E6;
+  --color-sage-dark: #B9C9AD;
+  --color-parchment: #F6F1E7;
+  --color-parchment-light: #FCF9F3;
+  --color-parchment-dark: #EDE4D3;
+  --color-clay: #C67A3D;
+  --color-clay-light: #D9955F;
+  --color-clay-dark: #A5602A;
+  --color-deep-rust: #8F4E26;
+  --color-deep-rust-dark: #6C3717;
+  --color-forest: #223629;
+  --color-forest-light: #324F3D;
+  --color-forest-muted: #4A6354;
+
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-sans: "Work Sans", system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-parchment);
+  color: var(--color-forest);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, .font-editorial {
+  font-family: var(--font-serif);
+}
+
+/* Claymorphism styles */
+.clay-card {
+  background-color: #F8F5EE;
+  border-radius: 1.25rem;
+  box-shadow: 
+    8px 8px 20px rgba(34, 54, 41, 0.08),
+    -6px -6px 16px rgba(255, 255, 255, 0.9),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.8),
+    inset -1px -1px 2px rgba(34, 54, 41, 0.03);
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  border: 1px solid rgba(198, 122, 61, 0.12);
+}
+
+.clay-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    12px 14px 28px rgba(34, 54, 41, 0.12),
+    -8px -8px 20px rgba(255, 255, 255, 0.95),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.9),
+    inset -1px -1px 2px rgba(34, 54, 41, 0.04);
+}
+
+.clay-card-inset {
+  background-color: #EDE5D5;
+  border-radius: 1rem;
+  box-shadow: 
+    inset 4px 4px 8px rgba(34, 54, 41, 0.09),
+    inset -3px -3px 7px rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(143, 78, 38, 0.08);
+}
+
+.clay-btn-primary {
+  background: linear-gradient(135deg, #C67A3D 0%, #B0672E 100%);
+  color: #FCF9F3;
+  border-radius: 0.875rem;
+  box-shadow: 
+    5px 5px 12px rgba(143, 78, 38, 0.35),
+    -3px -3px 8px rgba(255, 255, 255, 0.3),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.4);
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.clay-btn-primary:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #D48648 0%, #BD7135 100%);
+  box-shadow: 
+    7px 8px 16px rgba(143, 78, 38, 0.45),
+    -4px -4px 10px rgba(255, 255, 255, 0.4);
+}
+
+.clay-btn-primary:active {
+  transform: translateY(1px);
+  box-shadow: 
+    inset 2px 2px 5px rgba(0, 0, 0, 0.25),
+    inset -1px -1px 3px rgba(255, 255, 255, 0.2);
+}
+
+.clay-btn-secondary {
+  background-color: #EBF1E6;
+  color: #223629;
+  border-radius: 0.875rem;
+  box-shadow: 
+    4px 4px 10px rgba(34, 54, 41, 0.1),
+    -3px -3px 8px rgba(255, 255, 255, 0.9),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.8);
+  transition: all 0.2s ease;
+  border: 1px solid rgba(34, 54, 41, 0.12);
+}
+
+.clay-btn-secondary:hover {
+  transform: translateY(-2px);
+  background-color: #DCE5D3;
+  box-shadow: 
+    6px 6px 14px rgba(34, 54, 41, 0.14),
+    -4px -4px 10px rgba(255, 255, 255, 0.95);
+}
+
+.clay-badge {
+  background: rgba(246, 241, 231, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  box-shadow: 
+    6px 6px 16px rgba(0, 0, 0, 0.2),
+    -4px -4px 12px rgba(255, 255, 255, 0.4),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F6F1E7;
+}
+::-webkit-scrollbar-thumb {
+  background: #C67A3D;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8F4E26;
+}
